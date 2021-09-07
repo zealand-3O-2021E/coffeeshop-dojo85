@@ -9,7 +9,7 @@ namespace CoffeeShopConsoleApp
         {
             Console.WriteLine("Hello Coffee Shop!");
 
-            // a list of all the orders for coffe in the coffee shop
+            // a list of all the orders for coffee in the coffee shop
             List<Coffee> orderList = new List<Coffee>()
             {
                 new BlackCoffee(),
@@ -17,19 +17,19 @@ namespace CoffeeShopConsoleApp
                 new Cortado(),
                 new BlackCoffee(2),
                 new Latte(3),
-                new Cortado(4)
+                new Americano(4),
+                new FlatWhite()
 
             };
 
             // a list of products containing milk only
             // only objects of types that implement the IMilk interface
-            List<IMilk> milkList = new List<IMilk>()
+            List<IMilk> milkList = new List<IMilk>();
+
+            foreach (var coffee in orderList)
             {
-                new Latte(),
-                new Cortado(),
-                new Latte(3),
-                new Cortado(4)
-            };
+                if(coffee is IMilk) milkList.Add(coffee as IMilk);
+            }
 
             Console.WriteLine("First list: all products");
             foreach (var coffee in orderList)

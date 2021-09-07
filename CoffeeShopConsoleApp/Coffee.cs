@@ -6,7 +6,7 @@ using System.Text;
 namespace CoffeeShopConsoleApp
 {
     /// <summary>
-    /// A class that is used for coffe orders
+    /// A class that is used for coffee orders
     /// </summary>
     public abstract class Coffee
     {
@@ -27,6 +27,8 @@ namespace CoffeeShopConsoleApp
 
         public int ProductPrice { get; set; }
 
+        public string Blend { get; set; }
+
         public Coffee(int discount)
         {
             Discount = discount;
@@ -40,7 +42,7 @@ namespace CoffeeShopConsoleApp
 
         /// <summary>
         /// returns the price of the coffee
-        /// It's possible to override this method, beacuse it is virtual 
+        /// It's possible to override this method, because it is virtual 
         /// </summary>
         /// <returns>20 dkr</returns>
         public virtual int Price()
