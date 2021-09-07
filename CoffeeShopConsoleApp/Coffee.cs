@@ -14,7 +14,7 @@ namespace CoffeeShopConsoleApp
         /// It's possible to override this method, beacuse it is virtual 
         /// </summary>
         /// <returns>20 dkr</returns>
-        public virtual int price()
+        public virtual int Price()
         {
             return 20;
         }
