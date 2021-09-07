@@ -9,6 +9,14 @@ namespace CoffeeShopConsoleApp
     /// </summary>
     public abstract class Coffee
     {
+
+        public int Discount { get; set; }
+
+        public Coffee(int discount)
+        {
+            Discount = discount;
+        }
+
         /// <summary>
         /// returns the price of the coffee
         /// It's possible to override this method, beacuse it is virtual 
@@ -21,5 +29,9 @@ namespace CoffeeShopConsoleApp
 
         public abstract string Strength();
 
+        public override string ToString()
+        {
+            return $"Price: {Price()} dkk, Strength: {Strength()}";
+        }
     }
 }
