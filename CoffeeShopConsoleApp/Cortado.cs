@@ -4,11 +4,16 @@ using System.Text;
 
 namespace CoffeeShopConsoleApp
 {
-    class BlackCoffee : Coffee
+    class Cortado : Coffee
     {
+        public override int Price()
+        {
+            return 25;
+        }
+
         public override string Strength()
         {
-            return "Strong";
+            return "Medium";
         }
     }
 }
