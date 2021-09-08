@@ -20,8 +20,6 @@ namespace CoffeeShopConsoleApp
                 new Americano(4),
                 new FlatWhite("Arabica"),
                 new Americano("Espresso Blend", 4)
-                
-
             };
 
             // a list of products containing milk only
@@ -45,8 +43,6 @@ namespace CoffeeShopConsoleApp
             {
                 Console.WriteLine(drink);
             }
-
-
         }
     }
 }
