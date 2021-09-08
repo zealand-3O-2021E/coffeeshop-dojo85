@@ -10,36 +10,38 @@ namespace CoffeeShopConsoleApp
     /// </summary>
     public abstract class Coffee
     {
-        protected int _discount;
+        private int _discount;
+        private string _blend;
+
+        public Coffee(string blend)
+        {
+            _blend = blend;
+        }
+
+        public Coffee(int discount)
+        {
+            Discount = discount;
+        }
+
+        public Coffee()
+        {
+        }
 
         public int Discount
         {
             get => _discount;
             set
             {
-                if (value > 5)
+                if (value > 5 || value < 0)
                 {
-                    throw new ArgumentException($"The discount can't be bigger than 5 kr. You entered: {value}");
+                    throw new ArgumentException($"The discount must be between 0 and 5 kr. You entered: {value}");
                 }
                 _discount = value;
             }
         }
 
-        public int ProductPrice { get; set; }
-
-        public string Blend { get; set; }
-
-        public Coffee(int discount)
-        {
-            Discount = discount;
-            ProductPrice = 20;
-        }
-
-        public Coffee()
-        {
-            ProductPrice = 20;
-        }
-
+        public abstract string TypeOfCoffee { get; }
+        
         /// <summary>
         /// returns the price of the coffee
         /// It's possible to override this method, because it is virtual 
@@ -47,14 +49,19 @@ namespace CoffeeShopConsoleApp
         /// <returns>20 dkr</returns>
         public virtual int Price()
         {
-            return ProductPrice - Discount;
+            return 20 - Discount;
         }
 
         public abstract string Strength();
 
+        public virtual string CoffeeType()
+        {
+            return !string.IsNullOrEmpty(_blend) ? $"{TypeOfCoffee}, {_blend}" : TypeOfCoffee;
+        }
+
         public override string ToString()
         {
-            return $"{this.GetType().Name} - Price: {Price()} kr, Strength: {Strength()}";
+            return $"{CoffeeType()} - Price: {Price()} kr, Strength: {Strength()}";
         }
     }
 }
