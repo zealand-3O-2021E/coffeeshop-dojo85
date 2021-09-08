@@ -29,6 +29,5 @@ namespace CoffeeShopConsoleApp
         {
             return "Strong";
         }
-
     }
 }

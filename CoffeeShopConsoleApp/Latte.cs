@@ -29,7 +29,6 @@ namespace CoffeeShopConsoleApp
             return 40 - Discount;
         }
 
-
         public override string Strength()
         {
             return "Weak";
@@ -39,6 +38,5 @@ namespace CoffeeShopConsoleApp
         {
             return 200;
         }
-
     }
 }

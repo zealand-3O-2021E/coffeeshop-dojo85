@@ -17,6 +17,7 @@ namespace CoffeeShopConsoleApp
         public Americano(int discount) :base(discount)
         {
         }
+
         public Americano()
         {
         }
@@ -32,6 +33,5 @@ namespace CoffeeShopConsoleApp
         {
             return "Strong";
         }
-
     }
 }
