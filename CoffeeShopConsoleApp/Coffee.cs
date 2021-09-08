@@ -13,6 +13,12 @@ namespace CoffeeShopConsoleApp
         private int _discount;
         private string _blend;
 
+        public Coffee(string blend, int discount)
+        {
+            _blend = blend;
+            _discount = discount;
+        }
+
         public Coffee(string blend)
         {
             _blend = blend;

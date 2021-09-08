@@ -18,8 +18,8 @@ namespace CoffeeShopConsoleApp
                 new BlackCoffee(2),
                 new Latte(3),
                 new Americano(4),
-                new FlatWhite(),
-                new Americano("Arabica")
+                new FlatWhite("Arabica"),
+                new Americano("Espresso Blend", 4)
                 
 
             };
