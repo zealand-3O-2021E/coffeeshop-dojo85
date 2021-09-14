@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopTestProject
 {
-    [TestClass()]
+    [TestClass]
     public class AmericanoTests
     {
         //[TestMethod()]
@@ -24,13 +24,13 @@ namespace CoffeeShopTestProject
         //[DataTestMethod]
         //[DataRow(3, 27)]
         //[DataRow(1, 29)]
-        //public void Price_WithValidDiscount_Test(int discount, int expectedValue)
+        //public void price_withvaliddiscount_test(int discount, int expectedvalue)
         //{
         //    var coffee = new Americano(discount);
 
         //    var price = coffee.Price();
 
-        //    Assert.AreEqual(expectedValue, price);
+        //    Assert.AreEqual(expectedvalue, price);
         //}
 
         //[TestMethod()]

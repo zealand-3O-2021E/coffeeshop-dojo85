@@ -31,6 +31,7 @@ namespace CoffeeShopTestProject
         //The method or the property must return an IEnumerable<object[]>.
         //Each row corresponds to the values of a test.
 
+        // Test of Price() method
         [DataTestMethod]
         [DynamicData(nameof(GetPriceTestData), DynamicDataSourceType.Method)]
         public void PriceMethod_ForEachCoffeeSort_Test(Coffee coffee, int expectedValue)
@@ -49,6 +50,8 @@ namespace CoffeeShopTestProject
             yield return new object[] { new Latte(), 40};
         }
 
+
+        // Test of Strength() method
         [DataTestMethod]
         [DynamicData(nameof(GetStrengthTestData), DynamicDataSourceType.Method)]
         public void StrengthMethod_ForEachCoffeeSort_Test(Coffee coffee, string expectedValue)
